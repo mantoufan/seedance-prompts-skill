@@ -3,7 +3,7 @@ name: seedance-prompts-skill
 description: 专业的 Seedance 2.0 AI 视频脚本与分镜提示词生成器。适用于：(1) 把文章/小说/故事大纲改编为视频脚本；(2) 生成 Seedance 2.0 分镜提示词（时间轴/镜头序列、音画一体）；(3) 规划多集 AI 短剧/短视频系列；(4) 为 Nano Banana Pro、GPT-image 等图像模型创建角色/场景/道具生成提示词。当用户提到 Seedance、即梦、小云雀、LibTV、沉浸式短片、AI 短剧/分镜/视频脚本，或想把小说推文/文章做成视频时触发。输入可为完整小说、文章或简短大纲；输出包括标准剧本（△镜头描述+对白+OS/VO+闪回+字幕）、剧集分解、资产生成提示词与 Seedance 2.0 分镜脚本。
 ---
 
-# Seedance 分镜生成器
+# Seedance 提示词生成器
 
 专业的AI脚本和分镜生成系统，用于在Seedance 2.0平台上创建专业的AI视频系列。
 

@@ -1,6 +1,6 @@
 {
   "name": "seedance-prompts-skill",
-  "displayName": "Seedance 分镜生成器",
+  "displayName": "Seedance 提示词生成器",
   "description": "专业的 Seedance 2.0 AI 视频脚本与分镜提示词生成 Skill：把文章/故事转为标准剧本、资产生成提示词与分镜脚本，含 10 条生产铁律 + 17 个模板，并同步火山引擎官方指南。",
   "version": "1.0.0",
   "author": {

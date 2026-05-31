@@ -1,4 +1,4 @@
-# Seedance 分镜生成器 · Claude Skill
+# Seedance 提示词生成器 · Claude Skill
 
 **简体中文** | [English](README.en.md)
 

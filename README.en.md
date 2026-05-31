@@ -1,4 +1,4 @@
-# Seedance Storyboard Generator · Claude Skill
+# Seedance Prompts Generator · Claude Skill
 
 [简体中文](README.md) | **English**
 

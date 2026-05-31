@@ -65,7 +65,7 @@ Claude Code will clone the repo's `skills/seedance-prompts-skill/` subdirectory 
 
 ### Option 3: upload the zip to Claude (claude.ai / desktop)
 
-Download **[`seedance-prompts-skill.zip`](seedance-prompts-skill.zip)** from the repo root, then upload it under Claude's **Settings → Capabilities / Skills**. The zip's top level is a single `seedance-prompts-skill/` folder (containing `SKILL.md` and `references/`), matching Claude's skill-upload format, and CI keeps it up to date whenever the skill changes.
+Download **[`seedance-prompts-skill.zip`](seedance-prompts-skill.zip)** from the **[Releases](https://github.com/mantoufan/seedance-prompts-skill/releases/latest)** page or the repo root, then upload it under Claude's **Settings → Capabilities / Skills**. The zip's top level is a single `seedance-prompts-skill/` folder (containing `SKILL.md` and `references/`), matching Claude's skill-upload format, and CI keeps it up to date whenever the skill changes.
 
 ### Option 4: manual clone as a local Skill
 

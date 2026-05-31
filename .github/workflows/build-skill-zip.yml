@@ -35,3 +35,15 @@ jobs:
           else
             echo "zip already up to date"
           fi
+
+      - name: Sync zip onto latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="$(gh release view --json tagName -q .tagName 2>/dev/null || true)"
+          if [ -n "$TAG" ]; then
+            echo "Refreshing asset on release $TAG"
+            gh release upload "$TAG" seedance-prompts-skill.zip --clobber
+          else
+            echo "No release found; skipping asset sync"
+          fi

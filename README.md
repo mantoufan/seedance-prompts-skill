@@ -88,6 +88,16 @@ cp -r /tmp/seedance/skills/seedance-prompts-skill .claude/skills/
 - **本地手动重建**：`bash scripts/build-zip.sh`。
 - **本地提交时自动重建**（可选）：启用一次 `git config core.hooksPath .githooks`，之后凡提交涉及 `skills/` 的改动，[`.githooks/pre-commit`](.githooks/pre-commit) 会自动重打包并 `git add` 该 zip。
 
+## 在 ChatGPT / 其他 LLM 上使用（OpenAI 等）
+
+本技能的正文（[SKILL.md](skills/seedance-prompts-skill/SKILL.md) + [seedance-prompt-guide.md](skills/seedance-prompts-skill/references/seedance-prompt-guide.md)）是**与模型无关的纯 Markdown 提示词工程内容**，可在任意大模型上复用：
+
+- **ChatGPT Custom GPT（推荐）**：新建一个 GPT，把 `SKILL.md` 全文粘进 **Instructions**，把 `seedance-prompt-guide.md` 作为 **Knowledge** 文件上传，即可获得与本技能一致的剧本 / 分镜生成能力。
+- **ChatGPT Project / 普通对话**：把 `SKILL.md` 作为系统提示或首条消息粘入，再贴上你的小说 / 文章 / 大纲。
+- **其它 LLM**（Gemini、DeepSeek 等）同理：将上述内容作为系统提示注入即可。
+
+> 注意：`/plugin` 一键安装、自动触发是 **Claude 专有能力**，ChatGPT 等平台需手动粘贴或自建 Custom GPT。生成结果的 **Seedance 2.0 提示词语法不变**（仍投喂即梦 / 小云雀 / LibTV 等平台）。
+
 ## 触发场景
 
 向 Claude 提出以下任意需求时会自动调用本技能：

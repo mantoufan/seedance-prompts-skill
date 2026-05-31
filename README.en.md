@@ -88,6 +88,16 @@ cp -r /tmp/seedance/skills/seedance-prompts-skill .claude/skills/
 - **Local rebuild**: `bash scripts/build-zip.sh`.
 - **Local auto-rebuild on commit** (optional): enable once with `git config core.hooksPath .githooks`; thereafter any commit touching `skills/` triggers [`.githooks/pre-commit`](.githooks/pre-commit) to repackage and `git add` the zip.
 
+## Use with ChatGPT / other LLMs (OpenAI, etc.)
+
+The skill's body ([SKILL.md](skills/seedance-prompts-skill/SKILL.md) + [seedance-prompt-guide.md](skills/seedance-prompts-skill/references/seedance-prompt-guide.md)) is **model-agnostic, plain-Markdown prompt-engineering content** that can be reused on any LLM:
+
+- **ChatGPT Custom GPT (recommended)**: create a GPT, paste the full `SKILL.md` into **Instructions**, and upload `seedance-prompt-guide.md` as a **Knowledge** file — you get the same script / storyboard generation behavior.
+- **ChatGPT Project / regular chat**: paste `SKILL.md` as the system prompt or first message, then add your novel / article / outline.
+- **Other LLMs** (Gemini, DeepSeek, etc.) work the same way: inject the content as a system prompt.
+
+> Note: one-click `/plugin` install and auto-invocation are **Claude-only** capabilities; on ChatGPT and others you paste manually or build a Custom GPT. The generated **Seedance 2.0 prompt syntax is unchanged** (still fed to Jimeng / Xiaoyunque / LibTV, etc.).
+
 ## When it triggers
 
 The skill is invoked automatically when you ask Claude to:

@@ -1,4 +1,6 @@
-# Seedance 提示词生成器 · Claude Skill
+# Seedance 提示词生成器
+
+> AI 视频脚本与分镜提示词生成器 · Claude Skill，同样适用于 ChatGPT / 其它 LLM
 
 **简体中文** | [English](README.en.md)
 
@@ -80,15 +82,7 @@ cp -r /tmp/seedance/skills/seedance-prompts-skill .claude/skills/
 
 > 说明：Claude 通过 SKILL.md 的 frontmatter `name: seedance-prompts-skill` 识别技能。手动安装复制的是 `skills/seedance-prompts-skill/` 子目录（而非整个仓库），安装后重启 Claude Code 即可加载。
 
-## 维护：zip 自动同步
-
-`seedance-prompts-skill.zip` 由源文件打包而成，无需手动维护：
-
-- **CI 自动重建**：GitHub Action [`build-skill-zip.yml`](.github/workflows/build-skill-zip.yml) 监听 `skills/**` 变更，自动重新打包并把刷新后的 zip 提交回 `main`（构建可复现——固定时间戳 + 排序，仅内容变化时才产生差异，不会触发循环）。
-- **本地手动重建**：`bash scripts/build-zip.sh`。
-- **本地提交时自动重建**（可选）：启用一次 `git config core.hooksPath .githooks`，之后凡提交涉及 `skills/` 的改动，[`.githooks/pre-commit`](.githooks/pre-commit) 会自动重打包并 `git add` 该 zip。
-
-## 在 ChatGPT / 其他 LLM 上使用（OpenAI 等）
+### 方式五：在 ChatGPT / 其他 LLM 上使用（OpenAI 等）
 
 本技能的正文（[SKILL.md](skills/seedance-prompts-skill/SKILL.md) + [seedance-prompt-guide.md](skills/seedance-prompts-skill/references/seedance-prompt-guide.md)）是**与模型无关的纯 Markdown 提示词工程内容**，可在任意大模型上复用：
 
@@ -97,6 +91,14 @@ cp -r /tmp/seedance/skills/seedance-prompts-skill .claude/skills/
 - **其它 LLM**（Gemini、DeepSeek 等）同理：将上述内容作为系统提示注入即可。
 
 > 注意：`/plugin` 一键安装、自动触发是 **Claude 专有能力**，ChatGPT 等平台需手动粘贴或自建 Custom GPT。生成结果的 **Seedance 2.0 提示词语法不变**（仍投喂即梦 / 小云雀 / LibTV 等平台）。
+
+## 维护：zip 自动同步
+
+`seedance-prompts-skill.zip` 由源文件打包而成，无需手动维护：
+
+- **CI 自动重建**：GitHub Action [`build-skill-zip.yml`](.github/workflows/build-skill-zip.yml) 监听 `skills/**` 变更，自动重新打包并把刷新后的 zip 提交回 `main`（构建可复现——固定时间戳 + 排序，仅内容变化时才产生差异，不会触发循环）。
+- **本地手动重建**：`bash scripts/build-zip.sh`。
+- **本地提交时自动重建**（可选）：启用一次 `git config core.hooksPath .githooks`，之后凡提交涉及 `skills/` 的改动，[`.githooks/pre-commit`](.githooks/pre-commit) 会自动重打包并 `git add` 该 zip。
 
 ## 触发场景
 

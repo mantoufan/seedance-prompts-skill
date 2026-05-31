@@ -1,4 +1,6 @@
-# Seedance Prompts Generator · Claude Skill
+# Seedance Prompts Generator
+
+> An AI video script & storyboard prompt generator · a Claude Skill that works with ChatGPT / other LLMs too
 
 [简体中文](README.md) | **English**
 
@@ -80,15 +82,7 @@ cp -r /tmp/seedance/skills/seedance-prompts-skill .claude/skills/
 
 > Note: Claude identifies the skill via the SKILL.md frontmatter `name: seedance-prompts-skill`. Manual install copies the `skills/seedance-prompts-skill/` subdirectory (not the whole repo); restart Claude Code after copying to load it.
 
-## Maintenance: zip auto-sync
-
-`seedance-prompts-skill.zip` is generated from the source — no manual upkeep:
-
-- **CI rebuild**: the GitHub Action [`build-skill-zip.yml`](.github/workflows/build-skill-zip.yml) watches `skills/**`, repackages, and commits the refreshed zip back to `main` (reproducible build — fixed timestamps + sorted entries, so only content changes produce a diff, and the bot commit cannot re-trigger the loop).
-- **Local rebuild**: `bash scripts/build-zip.sh`.
-- **Local auto-rebuild on commit** (optional): enable once with `git config core.hooksPath .githooks`; thereafter any commit touching `skills/` triggers [`.githooks/pre-commit`](.githooks/pre-commit) to repackage and `git add` the zip.
-
-## Use with ChatGPT / other LLMs (OpenAI, etc.)
+### Option 5: use with ChatGPT / other LLMs (OpenAI, etc.)
 
 The skill's body ([SKILL.md](skills/seedance-prompts-skill/SKILL.md) + [seedance-prompt-guide.md](skills/seedance-prompts-skill/references/seedance-prompt-guide.md)) is **model-agnostic, plain-Markdown prompt-engineering content** that can be reused on any LLM:
 
@@ -97,6 +91,14 @@ The skill's body ([SKILL.md](skills/seedance-prompts-skill/SKILL.md) + [seedance
 - **Other LLMs** (Gemini, DeepSeek, etc.) work the same way: inject the content as a system prompt.
 
 > Note: one-click `/plugin` install and auto-invocation are **Claude-only** capabilities; on ChatGPT and others you paste manually or build a Custom GPT. The generated **Seedance 2.0 prompt syntax is unchanged** (still fed to Jimeng / Xiaoyunque / LibTV, etc.).
+
+## Maintenance: zip auto-sync
+
+`seedance-prompts-skill.zip` is generated from the source — no manual upkeep:
+
+- **CI rebuild**: the GitHub Action [`build-skill-zip.yml`](.github/workflows/build-skill-zip.yml) watches `skills/**`, repackages, and commits the refreshed zip back to `main` (reproducible build — fixed timestamps + sorted entries, so only content changes produce a diff, and the bot commit cannot re-trigger the loop).
+- **Local rebuild**: `bash scripts/build-zip.sh`.
+- **Local auto-rebuild on commit** (optional): enable once with `git config core.hooksPath .githooks`; thereafter any commit touching `skills/` triggers [`.githooks/pre-commit`](.githooks/pre-commit) to repackage and `git add` the zip.
 
 ## When it triggers
 

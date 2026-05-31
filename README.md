@@ -20,28 +20,47 @@
 
 ## 目录结构
 
+本仓库同时是一个 **Claude Code 插件**，并自带 marketplace 清单，可一键安装。
+
 ```
 seedance-prompts-skill/
-├── SKILL.md                      # 技能主文件（工作流 + 生产铁律 + 输出格式）
-└── references/
-    └── seedance-prompt-guide.md  # 完整模板库与提示词手册（17 个模板 + 速查表 + 示例 + 官方指南同步）
+├── .claude-plugin/
+│   ├── plugin.json                       # 插件清单
+│   └── marketplace.json                  # marketplace 清单（自带市场，支持 /plugin 安装）
+└── skills/
+    └── seedance-prompts-skill/
+        ├── SKILL.md                      # 技能主文件（工作流 + 生产铁律 + 输出格式）
+        └── references/
+            └── seedance-prompt-guide.md  # 完整模板库与提示词手册（17 个模板 + 速查表 + 示例 + 官方指南同步）
 ```
 
 ## 安装
 
-将整个目录复制到 Claude 的 skills 目录，目录名需与 SKILL.md 中 `name` 字段一致：
+### 方式一：`/plugin` 一键安装（推荐）
+
+在 Claude Code 中执行：
+
+```text
+/plugin marketplace add mantoufan/seedance-prompts-skill
+/plugin install seedance-prompts-skill@seedance-prompts
+```
+
+第一行把本仓库作为 marketplace（名为 `seedance-prompts`）添加进来；第二行从该市场安装 `seedance-prompts-skill` 插件。安装后技能即自动生效，无需手动重启。
+
+### 方式二：手动克隆为本地 Skill
+
+把 skill 子目录复制到 Claude 的 skills 目录（目录名与 SKILL.md 的 `name` 一致）：
 
 ```bash
 # 全局安装（对所有项目可用）
-git clone git@github.com:mantoufan/seedance-prompts-skill.git \
-  ~/.claude/skills/seedance-prompts-skill
+git clone git@github.com:mantoufan/seedance-prompts-skill.git /tmp/seedance \
+  && cp -r /tmp/seedance/skills/seedance-prompts-skill ~/.claude/skills/
 
 # 或项目级安装
-git clone git@github.com:mantoufan/seedance-prompts-skill.git \
-  .claude/skills/seedance-prompts-skill
+cp -r /tmp/seedance/skills/seedance-prompts-skill .claude/skills/
 ```
 
-> 说明：Claude 通过 SKILL.md 的 frontmatter `name: seedance-prompts-skill` 识别技能；建议把目录命名为同名以保持一致。安装后重启 Claude Code 即可自动加载。
+> 说明：Claude 通过 SKILL.md 的 frontmatter `name: seedance-prompts-skill` 识别技能。方式二复制的是 `skills/seedance-prompts-skill/` 子目录（而非整个仓库），安装后重启 Claude Code 即可加载。
 
 ## 触发场景
 
@@ -60,7 +79,7 @@ git clone git@github.com:mantoufan/seedance-prompts-skill.git \
 4. **创建资产生成计划** → C/S/P 编号 + 图像模型提示词。
 5. **生成 Seedance 2.0 分镜脚本** → 时间轴格式 + 素材上传清单 + 结尾帧描述（保证连续性）。
 
-详见 [SKILL.md](SKILL.md) 与 [references/seedance-prompt-guide.md](references/seedance-prompt-guide.md)。
+详见 [SKILL.md](skills/seedance-prompts-skill/SKILL.md) 与 [references/seedance-prompt-guide.md](skills/seedance-prompts-skill/references/seedance-prompt-guide.md)。
 
 ## 参考
 

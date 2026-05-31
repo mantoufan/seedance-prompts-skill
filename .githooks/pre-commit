@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Optional local hook: rebuild and stage the zip when skill files are committed.
+# Enable once with:  git config core.hooksPath .githooks
+set -euo pipefail
+
+if git diff --cached --name-only | grep -q '^skills/'; then
+  echo "[pre-commit] skill changed -> rebuilding seedance-prompts-skill.zip"
+  bash scripts/build-zip.sh >/dev/null
+  git add seedance-prompts-skill.zip
+fi

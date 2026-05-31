@@ -1,0 +1,37 @@
+name: Build skill zip
+
+# Rebuilds seedance-prompts-skill.zip whenever the skill source changes,
+# then commits the refreshed archive back to main. The zip itself is NOT in
+# the path filter, so the bot's commit cannot re-trigger this workflow.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - 'scripts/build-zip.sh'
+      - '.github/workflows/build-skill-zip.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build zip
+        run: bash scripts/build-zip.sh
+
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain seedance-prompts-skill.zip)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add seedance-prompts-skill.zip
+            git commit -m "chore: rebuild seedance-prompts-skill.zip [skip ci]"
+            git push
+          else
+            echo "zip already up to date"
+          fi

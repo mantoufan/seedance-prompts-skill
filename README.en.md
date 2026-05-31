@@ -29,9 +29,12 @@ This repo is also a **Claude Code plugin** with a self-contained marketplace man
 
 ```
 seedance-prompts-skill/
+├── seedance-prompts-skill.zip            # packaged skill (upload to Claude; auto-synced by CI)
 ├── .claude-plugin/
 │   ├── plugin.json                       # plugin manifest
 │   └── marketplace.json                  # marketplace manifest (self-hosted, enables /plugin install)
+├── scripts/build-zip.sh                  # reproducibly rebuilds the zip
+├── .github/workflows/build-skill-zip.yml # auto-rebuilds & commits the zip on skill changes
 └── skills/
     └── seedance-prompts-skill/
         ├── SKILL.md                      # main skill file (workflow + iron rules + output format)
@@ -41,7 +44,7 @@ seedance-prompts-skill/
 
 ## Installation
 
-### Option 1: one-click `/plugin` install (recommended)
+### Option 1: Claude Code · one-click `/plugin` install (recommended)
 
 In Claude Code, run:
 
@@ -52,20 +55,38 @@ In Claude Code, run:
 
 The first line adds this repo as a marketplace (named `seedance-prompts`); the second installs the `seedance-prompts-skill` plugin from it. The skill takes effect automatically — no manual restart needed.
 
-### Option 2: manual clone as a local Skill
+### Option 2: Claude Code · install by chat
 
-Copy the skill subdirectory into Claude's skills directory (the folder name must match the `name` field in SKILL.md):
+You can also just tell Claude Code:
+
+> Install https://github.com/mantoufan/seedance-prompts-skill as my skill
+
+Claude Code will clone the repo's `skills/seedance-prompts-skill/` subdirectory into `~/.claude/skills/` (global) or the current project's `.claude/skills/`.
+
+### Option 3: upload the zip to Claude (claude.ai / desktop)
+
+Download **[`seedance-prompts-skill.zip`](seedance-prompts-skill.zip)** from the repo root, then upload it under Claude's **Settings → Capabilities / Skills**. The zip's top level is a single `seedance-prompts-skill/` folder (containing `SKILL.md` and `references/`), matching Claude's skill-upload format, and CI keeps it up to date whenever the skill changes.
+
+### Option 4: manual clone as a local Skill
 
 ```bash
 # Global install (available to all projects)
-git clone git@github.com:mantoufan/seedance-prompts-skill.git /tmp/seedance \
+git clone https://github.com/mantoufan/seedance-prompts-skill.git /tmp/seedance \
   && cp -r /tmp/seedance/skills/seedance-prompts-skill ~/.claude/skills/
 
 # Or project-level install
 cp -r /tmp/seedance/skills/seedance-prompts-skill .claude/skills/
 ```
 
-> Note: Claude identifies the skill via the SKILL.md frontmatter `name: seedance-prompts-skill`. Option 2 copies the `skills/seedance-prompts-skill/` subdirectory (not the whole repo); restart Claude Code after copying to load it.
+> Note: Claude identifies the skill via the SKILL.md frontmatter `name: seedance-prompts-skill`. Manual install copies the `skills/seedance-prompts-skill/` subdirectory (not the whole repo); restart Claude Code after copying to load it.
+
+## Maintenance: zip auto-sync
+
+`seedance-prompts-skill.zip` is generated from the source — no manual upkeep:
+
+- **CI rebuild**: the GitHub Action [`build-skill-zip.yml`](.github/workflows/build-skill-zip.yml) watches `skills/**`, repackages, and commits the refreshed zip back to `main` (reproducible build — fixed timestamps + sorted entries, so only content changes produce a diff, and the bot commit cannot re-trigger the loop).
+- **Local rebuild**: `bash scripts/build-zip.sh`.
+- **Local auto-rebuild on commit** (optional): enable once with `git config core.hooksPath .githooks`; thereafter any commit touching `skills/` triggers [`.githooks/pre-commit`](.githooks/pre-commit) to repackage and `git add` the zip.
 
 ## When it triggers
 

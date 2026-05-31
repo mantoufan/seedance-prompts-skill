@@ -29,9 +29,12 @@
 
 ```
 seedance-prompts-skill/
+├── seedance-prompts-skill.zip            # 打包好的技能（用于上传到 Claude；由 CI 自动同步）
 ├── .claude-plugin/
 │   ├── plugin.json                       # 插件清单
 │   └── marketplace.json                  # marketplace 清单（自带市场，支持 /plugin 安装）
+├── scripts/build-zip.sh                  # 可复现地重建 zip
+├── .github/workflows/build-skill-zip.yml # skill 变更时自动重建并提交 zip
 └── skills/
     └── seedance-prompts-skill/
         ├── SKILL.md                      # 技能主文件（工作流 + 生产铁律 + 输出格式）
@@ -41,7 +44,7 @@ seedance-prompts-skill/
 
 ## 安装
 
-### 方式一：`/plugin` 一键安装（推荐）
+### 方式一：Claude Code · `/plugin` 一键安装（推荐）
 
 在 Claude Code 中执行：
 
@@ -52,20 +55,38 @@ seedance-prompts-skill/
 
 第一行把本仓库作为 marketplace（名为 `seedance-prompts`）添加进来；第二行从该市场安装 `seedance-prompts-skill` 插件。安装后技能即自动生效，无需手动重启。
 
-### 方式二：手动克隆为本地 Skill
+### 方式二：Claude Code · 直接对话安装
 
-把 skill 子目录复制到 Claude 的 skills 目录（目录名与 SKILL.md 的 `name` 一致）：
+也可以直接告诉 Claude Code：
+
+> 把 https://github.com/mantoufan/seedance-prompts-skill 安装为我的 skill
+
+Claude Code 会把仓库里的 `skills/seedance-prompts-skill/` 子目录克隆到 `~/.claude/skills/`（全局）或当前项目的 `.claude/skills/`。完成后即可使用。
+
+### 方式三：上传 zip 到 Claude（claude.ai / 桌面端）
+
+下载仓库根目录的 **[`seedance-prompts-skill.zip`](seedance-prompts-skill.zip)**，在 Claude 的「设置 → Capabilities / Skills」处上传该 zip 即可安装。该 zip 顶层是单个 `seedance-prompts-skill/` 文件夹（内含 `SKILL.md` 与 `references/`），符合 Claude 技能上传规范，并由 CI 在 skill 变更时自动保持最新。
+
+### 方式四：手动克隆为本地 Skill
 
 ```bash
 # 全局安装（对所有项目可用）
-git clone git@github.com:mantoufan/seedance-prompts-skill.git /tmp/seedance \
+git clone https://github.com/mantoufan/seedance-prompts-skill.git /tmp/seedance \
   && cp -r /tmp/seedance/skills/seedance-prompts-skill ~/.claude/skills/
 
 # 或项目级安装
 cp -r /tmp/seedance/skills/seedance-prompts-skill .claude/skills/
 ```
 
-> 说明：Claude 通过 SKILL.md 的 frontmatter `name: seedance-prompts-skill` 识别技能。方式二复制的是 `skills/seedance-prompts-skill/` 子目录（而非整个仓库），安装后重启 Claude Code 即可加载。
+> 说明：Claude 通过 SKILL.md 的 frontmatter `name: seedance-prompts-skill` 识别技能。手动安装复制的是 `skills/seedance-prompts-skill/` 子目录（而非整个仓库），安装后重启 Claude Code 即可加载。
+
+## 维护：zip 自动同步
+
+`seedance-prompts-skill.zip` 由源文件打包而成，无需手动维护：
+
+- **CI 自动重建**：GitHub Action [`build-skill-zip.yml`](.github/workflows/build-skill-zip.yml) 监听 `skills/**` 变更，自动重新打包并把刷新后的 zip 提交回 `main`（构建可复现——固定时间戳 + 排序，仅内容变化时才产生差异，不会触发循环）。
+- **本地手动重建**：`bash scripts/build-zip.sh`。
+- **本地提交时自动重建**（可选）：启用一次 `git config core.hooksPath .githooks`，之后凡提交涉及 `skills/` 的改动，[`.githooks/pre-commit`](.githooks/pre-commit) 会自动重打包并 `git add` 该 zip。
 
 ## 触发场景
 

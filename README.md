@@ -1,5 +1,9 @@
 # Seedance 分镜生成器 · Claude Skill
 
+**简体中文** | [English](README.en.md)
+
+> 本项目以 [liangdabiao/Seedance2-Storyboard-Generator](https://github.com/liangdabiao/Seedance2-Storyboard-Generator) 为基础，在 60 天内制作 60 个短视频、抖音涨粉 6000 的实战过程中，一点点更新、修改、完善而成。
+
 专业的 **Seedance 2.0** AI 视频脚本与分镜提示词生成 Skill。把一篇小说、文章或一句故事大纲，转换成可直接投喂给字节「小云雀」/ 即梦平台的标准剧本、资产生成提示词和时间轴分镜脚本。
 
 > Seedance 2.0 入口：小云雀 App / 网页版 → 创作 → 模式 → **沉浸式短片（Seedance 2.0）**。即梦平台同样可用。

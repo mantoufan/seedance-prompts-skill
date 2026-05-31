@@ -34,14 +34,14 @@ seedance-prompts-skill/
 ```bash
 # 全局安装（对所有项目可用）
 git clone git@github.com:mantoufan/seedance-prompts-skill.git \
-  ~/.claude/skills/seedance-storyboard-generator
+  ~/.claude/skills/seedance-prompts-skill
 
 # 或项目级安装
 git clone git@github.com:mantoufan/seedance-prompts-skill.git \
-  .claude/skills/seedance-storyboard-generator
+  .claude/skills/seedance-prompts-skill
 ```
 
-> 说明：Claude 通过 SKILL.md 的 frontmatter `name: seedance-storyboard-generator` 识别技能；建议把目录命名为同名以保持一致。安装后重启 Claude Code 即可自动加载。
+> 说明：Claude 通过 SKILL.md 的 frontmatter `name: seedance-prompts-skill` 识别技能；建议把目录命名为同名以保持一致。安装后重启 Claude Code 即可自动加载。
 
 ## 触发场景
 

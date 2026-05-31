@@ -14,7 +14,8 @@
 ## 核心特性
 
 - **10 条生产铁律**（SKILL.md 顶部，最高优先级）：时长分段计算、续接残影加固、无字幕规则、对白时间轴对齐、审核规避、TTS 配音避坑、动作可分性、双人手部锁定、输出排版、声线锁定。
-- **17 个提示词模板**（references/seedance-manual.md）：叙事 / 产品 / 角色 / 风景 / 战争 / 长镜头 / 伪纪录片 / **沉浸式短片（视听一体·八维黄金公式）** 等。
+- **17 个提示词模板**（references/seedance-prompt-guide.md）：叙事 / 产品 / 角色 / 风景 / 战争 / 长镜头 / 伪纪录片 / **沉浸式短片（视听一体·八维黄金公式）** 等。
+- **官方指南同步**（2026.05.15 更新）：三类任务基础公式、进阶公式、主体定义、分镜时序、动作描述、特殊字符规范、素材配置与常见问题避坑。
 - **镜头语言、氛围关键词、多模态引用语法（@图片/@视频/@音频）速查表**。
 
 ## 目录结构
@@ -23,7 +24,7 @@
 seedance-prompts-skill/
 ├── SKILL.md                      # 技能主文件（工作流 + 生产铁律 + 输出格式）
 └── references/
-    └── seedance-manual.md        # 完整模板库与提示词手册（17 个模板 + 速查表 + 示例）
+    └── seedance-prompt-guide.md  # 完整模板库与提示词手册（17 个模板 + 速查表 + 示例 + 官方指南同步）
 ```
 
 ## 安装
@@ -59,7 +60,7 @@ git clone git@github.com:mantoufan/seedance-prompts-skill.git \
 4. **创建资产生成计划** → C/S/P 编号 + 图像模型提示词。
 5. **生成 Seedance 2.0 分镜脚本** → 时间轴格式 + 素材上传清单 + 结尾帧描述（保证连续性）。
 
-详见 [SKILL.md](SKILL.md) 与 [references/seedance-manual.md](references/seedance-manual.md)。
+详见 [SKILL.md](SKILL.md) 与 [references/seedance-prompt-guide.md](references/seedance-prompt-guide.md)。
 
 ## 参考
 

@@ -6,7 +6,7 @@
 
 A professional **Seedance 2.0** AI video script & storyboard prompt generator Skill. It turns a novel, an article, or a one-line story outline into a standard screenplay, asset-generation prompts, and timeline storyboards — ready to feed straight into ByteDance's "Xiaoyunque" (小云雀) / Jimeng platform.
 
-> **Where it's available**　In China: Jimeng (即梦), Xiaoyunque (小云雀), libtv; Overseas: Dreamina (Jimeng's global edition), CapCut, Higgsfield, Replicate / Kie.ai (API).
+> **Where it's available**　In China: Jimeng (即梦), Xiaoyunque (小云雀), LibTV; Overseas: Dreamina (Jimeng's global edition), CapCut, Higgsfield.
 > Entry example (Xiaoyunque): App / Web → Create → Mode → **Immersive Short Film (Seedance 2.0)**.
 
 ## What it does

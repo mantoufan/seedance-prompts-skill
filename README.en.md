@@ -20,8 +20,9 @@ A professional **Seedance 2.0** AI video script & storyboard prompt generator Sk
 
 ## Key features
 
-- **10 production iron rules** (top of SKILL.md, highest priority): duration/segment math, continuation-ghosting reinforcement, no-subtitle rule, dialogue timeline alignment, moderation avoidance, TTS dubbing pitfalls, action separability, two-person hand locking, output formatting, voice-line locking.
+- **11 production iron rules** (top of SKILL.md, highest priority): duration/segment math, continuation-ghosting reinforcement, no-subtitle rule, dialogue timeline alignment, moderation avoidance, TTS dubbing pitfalls, action separability, two-person hand locking, output formatting, voice-line locking, **cinematic-language first**.
 - **17 prompt templates** (references/seedance-prompt-guide.md): narrative / product / character / scenery / war / long-take / mockumentary / **immersive short film (audio-visual integrated · 8-dimension golden formula)**, and more.
+- **Cinematic-technique playbook** (references/cinematic-techniques.md, distilled from a 16-episode Douyin "AI video tutorial" series by a practitioner): shot-size layering, 16 camera moves → emotion, 8 lighting setups → emotion, 7 story-composition types → effect, rhythm & montage, "human-feel" / micro-expression / AI-dubbing formulas, the 4-step consistency lock, and a manhua/short-drama industrial SOP.
 - **Official guide sync** (updated 2026.05.15): three task-type base formulas, the advanced formula, subject definition (multi-subject / multi-asset), shot sequencing, action description, special-character syntax, asset configuration, and **10+ common-issue fixes** (ID drift / twins / subtitles / style drift / extension jumps / quality decay / pronunciation / voice timbre, etc.).
 - **Quick-reference tables** for camera language, atmosphere keywords, and multimodal reference syntax (@image / @video / @audio).
 
@@ -39,9 +40,10 @@ seedance-prompts-skill/
 ├── .github/workflows/build-skill-zip.yml # auto-rebuilds & commits the zip on skill changes
 └── skills/
     └── seedance-prompts-skill/
-        ├── SKILL.md                      # main skill file (workflow + iron rules + output format)
+        ├── SKILL.md                      # main skill file (workflow + 11 iron rules + output format)
         └── references/
-            └── seedance-prompt-guide.md  # full template library & prompt manual (17 templates + cheatsheets + examples + official sync)
+            ├── seedance-prompt-guide.md  # full template library & prompt manual (17 templates + cheatsheets + examples + official sync)
+            └── cinematic-techniques.md   # cinematic-language playbook (camera/lighting/composition/rhythm/montage/consistency)
 ```
 
 ## Installation

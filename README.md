@@ -20,8 +20,9 @@
 
 ## 核心特性
 
-- **10 条生产铁律**（SKILL.md 顶部，最高优先级）：时长分段计算、续接残影加固、无字幕规则、对白时间轴对齐、审核规避、TTS 配音避坑、动作可分性、双人手部锁定、输出排版、声线锁定。
+- **11 条生产铁律**（SKILL.md 顶部，最高优先级）：时长分段计算、续接残影加固、无字幕规则、对白时间轴对齐、审核规避、TTS 配音避坑、动作可分性、双人手部锁定、输出排版、声线锁定、**视听语言优先**。
 - **17 个提示词模板**（references/seedance-prompt-guide.md）：叙事 / 产品 / 角色 / 风景 / 战争 / 长镜头 / 伪纪录片 / **沉浸式短片（视听一体·八维黄金公式）** 等。
+- **视听语言实战技巧库**（references/cinematic-techniques.md，由抖音「AI 视频教程」16 集创作者实操经验蒸馏）：景别分层、16 种运镜→情绪、8 种打光→情绪、7 种构图→作用 映射表，节奏与蒙太奇，活人感 / 情绪表情 / AI 配音公式，一致性硬控四步法，漫剧短剧工业化 SOP。
 - **官方指南同步**（2026.05.15 更新）：三类任务基础公式、进阶公式、主体定义（多主体/多素材）、分镜时序、动作描述、特殊字符规范、素材配置，以及 **10+ 条常见问题避坑**（ID 漂移 / 双胞胎 / 字幕 / 风格漂移 / 延长跳变 / 画质劣化 / 发音 / 音色等）。
 - **镜头语言、氛围关键词、多模态引用语法（@图片/@视频/@音频）速查表**。
 
@@ -39,9 +40,10 @@ seedance-prompts-skill/
 ├── .github/workflows/build-skill-zip.yml # skill 变更时自动重建并提交 zip
 └── skills/
     └── seedance-prompts-skill/
-        ├── SKILL.md                      # 技能主文件（工作流 + 生产铁律 + 输出格式）
+        ├── SKILL.md                      # 技能主文件（工作流 + 11 条生产铁律 + 输出格式）
         └── references/
-            └── seedance-prompt-guide.md  # 完整模板库与提示词手册（17 个模板 + 速查表 + 示例 + 官方指南同步）
+            ├── seedance-prompt-guide.md  # 完整模板库与提示词手册（17 个模板 + 速查表 + 示例 + 官方指南同步）
+            └── cinematic-techniques.md   # 视听语言实战技巧库（运镜/光影/构图/节奏/蒙太奇/一致性，创作者实操蒸馏）
 ```
 
 ## 安装
@@ -122,6 +124,7 @@ cp -r /tmp/seedance/skills/seedance-prompts-skill .claude/skills/
 ## 参考
 
 - 火山引擎官方提示词指南：https://www.volcengine.com/docs/82379/2222480?lang=zh
+- 视听语言实战技巧库蒸馏自抖音合集「AI 视频教程」（作者：李一帆 /「AI 界人民教师一帆」，16 集），见 [references/cinematic-techniques.md](skills/seedance-prompts-skill/references/cinematic-techniques.md)。
 
 ## License
 

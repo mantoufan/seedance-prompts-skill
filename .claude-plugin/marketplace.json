@@ -9,8 +9,8 @@
       "name": "seedance-prompts-skill",
       "source": "./",
       "displayName": "Seedance 提示词生成器",
-      "description": "专业的 Seedance 2.0 AI 视频脚本与分镜提示词生成 Skill：把文章/故事转为标准剧本、资产生成提示词与分镜脚本，含 11 条生产铁律 + 17 个模板 + 视听语言实战技巧库，并同步火山引擎官方指南。",
-      "version": "1.2.0",
+      "description": "专业的 Seedance 2.0 AI 视频脚本与分镜提示词生成 Skill：把文章/故事转为标准剧本、资产生成提示词与分镜脚本，含 12 条生产铁律 + 17 个模板 + 视听语言实战技巧库 + 提示词工程去 AI 感技巧库，并同步火山引擎官方指南。",
+      "version": "1.3.0",
       "license": "MIT",
       "keywords": [
         "seedance",

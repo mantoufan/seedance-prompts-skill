@@ -22,8 +22,10 @@ A professional **Seedance 2.0** AI video script & storyboard prompt generator Sk
 
 - **12 production iron rules** (top of SKILL.md, highest priority): duration/segment math, continuation-ghosting reinforcement, no-subtitle rule, dialogue timeline alignment, moderation avoidance, TTS dubbing pitfalls, action separability, two-person hand locking, output formatting, voice-line locking, **cinematic-language first**, **prompt-as-visual-language / de-AI-look**.
 - **17 prompt templates** (references/seedance-prompt-guide.md): narrative / product / character / scenery / war / long-take / mockumentary / **immersive short film (audio-visual integrated · 8-dimension golden formula)**, and more.
-- **Cinematic-technique playbook** (references/cinematic-techniques.md, distilled from a 16-episode Douyin "AI video tutorial" series by a practitioner): shot-size layering, 16 camera moves → emotion, 8 lighting setups → emotion, 7 story-composition types → effect, rhythm & montage, "human-feel" / micro-expression / AI-dubbing formulas, the 4-step consistency lock, and a manhua/short-drama industrial SOP.
+- **Cinematic-technique playbook** (references/cinematic-techniques.md, distilled from a 17-episode Douyin "AI video tutorial" series by a practitioner): shot-size layering, 16 camera moves → emotion, 8 lighting setups → emotion, 7 story-composition types → effect, rhythm & montage, "human-feel" / micro-expression / AI-dubbing formulas, the 4-step consistency lock, a manhua/short-drama industrial SOP, and **AI short-drama director's thinking** (five attention hooks + short-drama Agent / character asset library / storyboard-node workflow).
 - **Prompt-craft & realism playbook** (references/prompt-craft-and-realism.md, distilled from a 37-episode Douyin series by a practitioner): model-mechanism hacks (misinterpretation / word-order priority / perturbation words / robustness break / pseudo-perspective / time words / feature collapse / reverse prompting), lighting control, JSON-structured generation, prompt/style reverse-engineering, de-AI-look (anti-staged feel / foreground occlusion / subtractive aesthetics / word-trimming), data-driven color grading, action & character/voice consistency, and director's mindset.
+- **Seedance 2.0 prompt cookbook** (references/seedance2-prompt-cookbook.md, distilled from a 14-episode Douyin "Seedance2 lessons" series): copy-ready "keyword-trigger" recipes — camera-move / speed / fast-cut / composition / lighting recipe tables, anti-collapse universal formulas (character / scene / anime structures), plus 8 short-drama troubleshooting fixes (audio-first sync, 3-layer prompt structure, emotion progression, spatial consistency, multi-person layering, one-asset-one-job, the 3-beat payoff, off-screen action).
+- **AI portrait-realism keyword library** (references/portrait-realism-details.md, distilled from the Douyin "AI visual realism" series and others): copy-ready facial close-up keywords (eyes / lips / nose-cheek / hair), an anti-"plastic-skin" checklist, the 8-step micro-expression "write the emotion-change process" framework, and a "don't keyword-stuff → structure + relighting + multi-angle" workflow for lifelike characters.
 - **Official guide sync** (updated 2026.05.15): three task-type base formulas, the advanced formula, subject definition (multi-subject / multi-asset), shot sequencing, action description, special-character syntax, asset configuration, and **10+ common-issue fixes** (ID drift / twins / subtitles / style drift / extension jumps / quality decay / pronunciation / voice timbre, etc.).
 - **Quick-reference tables** for camera language, atmosphere keywords, and multimodal reference syntax (@image / @video / @audio).
 
@@ -44,8 +46,10 @@ seedance-prompts-skill/
         ├── SKILL.md                      # main skill file (workflow + 12 iron rules + output format)
         └── references/
             ├── seedance-prompt-guide.md     # full template library & prompt manual (17 templates + cheatsheets + examples + official sync)
-            ├── cinematic-techniques.md      # cinematic-language playbook (camera/lighting/composition/rhythm/montage/consistency)
-            └── prompt-craft-and-realism.md  # prompt-craft & realism playbook (model-mechanism hacks / de-AI-look / grading / consistency / director mindset)
+            ├── cinematic-techniques.md      # cinematic-language playbook (camera/lighting/composition/rhythm/montage/consistency/director thinking)
+            ├── prompt-craft-and-realism.md  # prompt-craft & realism playbook (model-mechanism hacks / de-AI-look / grading / consistency / director mindset)
+            ├── seedance2-prompt-cookbook.md # Seedance 2.0 prompt cookbook (camera/lighting/universal formulas + 8 short-drama troubleshooting fixes)
+            └── portrait-realism-details.md  # AI portrait-realism keyword library (eyes/lips/nose-cheek/hair/skin/micro-expression + structure+relight+multi-angle workflow)
 ```
 
 ## Installation
@@ -126,8 +130,12 @@ See [SKILL.md](skills/seedance-prompts-skill/SKILL.md) and [references/seedance-
 ## References
 
 - Volcengine official prompt guide: https://www.volcengine.com/docs/82379/2222480?lang=zh
-- The cinematic-technique playbook is distilled from the Douyin series "AI 视频教程" (by 李一帆, 16 episodes); see [references/cinematic-techniques.md](skills/seedance-prompts-skill/references/cinematic-techniques.md).
+- The cinematic-technique playbook is distilled from the Douyin series "AI 视频教程" (by 李一帆, 17 episodes); see [references/cinematic-techniques.md](skills/seedance-prompts-skill/references/cinematic-techniques.md).
 - The prompt-craft & realism playbook is distilled from the Douyin series "刺猬星球superi · ai创作者的乌托邦" (37 episodes); see [references/prompt-craft-and-realism.md](skills/seedance-prompts-skill/references/prompt-craft-and-realism.md).
+- The Seedance 2.0 prompt cookbook is distilled from the Douyin series "Seedance2 教学计划" (by 张百川AI, 14 episodes); see [references/seedance2-prompt-cookbook.md](skills/seedance-prompts-skill/references/seedance2-prompt-cookbook.md).
+- The AI portrait-realism keyword library is distilled from the Douyin series "AI视觉真实感系列" (by 啊布 / AI短剧实战派) and creators such as Jac.key; see [references/portrait-realism-details.md](skills/seedance-prompts-skill/references/portrait-realism-details.md).
+
+> All playbooks above are distilled from creators' public videos/collections (captions, on-screen text and images). Copyright belongs to the original authors; for study and research only.
 
 ## License
 

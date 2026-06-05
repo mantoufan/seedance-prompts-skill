@@ -387,7 +387,7 @@ X-X [日/夜] [内/外] [场景名称]
 - 氛围关键词库
 - 多模态引用语法（@图片X, @视频X, @音频X）
 
-视听语言实战技巧库见 [references/cinematic-techniques.md](references/cinematic-techniques.md)（由抖音「AI 视频教程」16 集创作者实操经验蒸馏整理）：
+视听语言实战技巧库见 [references/cinematic-techniques.md](references/cinematic-techniques.md)（由抖音「AI 视频教程」17 集创作者实操经验蒸馏整理）：
 
 - 四模态能力地图（P 视频 / TVC 广告 / 电影镜头复刻）
 - 景别分层、16 种运镜→情绪、8 种打光→情绪、7 种构图→作用 的可套用映射表
@@ -395,6 +395,7 @@ X-X [日/夜] [内/外] [场景名称]
 - 活人感 3 招、情绪表情公式、AI 配音 3 步
 - 一致性硬控四步法（角色库 / 场景锚点 / 尾帧续接 / 动作迁移）
 - 漫剧 / 短剧工业化 SOP、3 人团队分工、一句话出片三种打法
+- AI 短剧导演思维：五大注意力钩子（异常事件 / 情绪冲突 / 信息缺口 / 情绪治愈 / 视觉奇观）+ 短剧 Agent 2.0 选题、角色资产库、分镜节点工作流
 
 提示词工程底层机制与去 AI 感技巧库见 [references/prompt-craft-and-realism.md](references/prompt-craft-and-realism.md)（由抖音「刺猬星球superi」37 集创作者实操经验蒸馏，"邪修"篇）：
 

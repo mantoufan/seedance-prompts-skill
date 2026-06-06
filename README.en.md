@@ -126,17 +126,120 @@ After installing (see above), just describe what you want to Claude in natural l
 
 ### Examples
 
-**① Write a short drama from scratch (upstream)**
+The four examples below chain into one full pipeline: from a one-line pitch for a "returning war god + cute baby" short drama, to a per-episode script, then extracting assets and converting to a Seedance storyboard. Click to expand the real outputs (Chinese, as the skill outputs).
+
+<details>
+<summary><b>① Upstream · genre + story skeleton</b> (<code>/start</code> → <code>/plan</code>)</summary>
+
+**Input:**
 
 > Write me a "returning war god + cute baby" short drama, female-audience, 60 episodes, starting from genre selection.
 
-Claude enters Stage 0: `/start` confirm genre/audience/tone/episode-count → `/plan` three-act structure + paywall cliffhangers + satisfaction matrix → `/characters` cast + 4-tier villains → `/outline` 60-episode directory (🔥 key / 💰 paywall) → `/episode 1` outputs the per-episode △ script → `/review`. Once the screenplay is done, hand it off to the downstream video stage in one step.
+**Output (excerpt):**
 
-**② Make video from an existing script/novel (downstream)**
+```markdown
+# 🎬 创作方向确认
+- 题材组合：战神归来 + 萌宝（赘婿逆袭向）
+- 目标受众：女频   ·   故事基调：爽燃 + 温情
+- 结局类型：大团圆   ·   集数规模：60 集（标准）
 
-> Convert this novel into a Seedance 2.0 immersive short-film storyboard: {paste text}
+# 📋 创作方案（/plan 节选）
+剧名备选：①《战神归来宠妻日常》②《五年之约》③《爹地，妈咪又被欺负了》
+一句话故事线：戍边五年的战神秦烈归来，发现妻子苏晚为他生下女儿念念，
+              却在豪门苏家受尽羞辱——他要带妻女，把欠她们的全讨回来。
+三幕结构（60 集）：1-15 建置 / 16-45 对抗 / 46-60 高潮
+付费卡点（💰）：第 3 集（身份即将揭露）、第 8 集（念念生死一线）…
+爽点矩阵：身份碾压 + 打脸复仇 + 情感爆发
+```
 
-Claude outputs: a full screenplay (△ shots + dialogue + OS/VO) → C01–C99 / S01–S99 / P01–P99 asset-generation prompts (characters use the realism keywords) → 15s timeline storyboards (audio-visual integrated, dialogue-aligned, ending-frame continuation), ready to feed into Xiaoyunque / Jimeng.
+</details>
+
+<details>
+<summary><b>② Upstream · per-episode script</b> (<code>/episode 1</code>, △ format)</summary>
+
+**Input:** `/episode 1`
+
+**Output (excerpt):**
+
+```markdown
+# 第1集：归家即羞辱
+> 本集关键词：归来 / 打脸 / 护父   ｜   本集爽点：身份碾压（铺垫）
+
+## 场次一
+**场景：** 内景 · 苏家别墅·宴会厅 · 夜
+**出场人物：** 秦烈、苏晚、念念、苏母
+
+△ （全景）水晶灯下宾客云集，秦烈一身洗得发白的旧军装站在门口，格格不入。
+**苏母**（冷笑）："五年不回，还以为死在外头了。"
+△ （特写）四岁念念攥紧小拳头，挡在秦烈身前。
+**念念**（奶声奶气，却很倔）："不许凶我爸爸！我爸爸是大英雄！"
+♪ 音乐提示：低沉弦乐渐起，暗藏压迫感
+
+> 🎣 本集钩子：秦烈旧手机震动，屏幕显示"军部·特急"。
+```
+
+</details>
+
+<details>
+<summary><b>③ Downstream · asset-generation prompts</b> (C/S/P, for Nano Banana Pro / GPT-image)</summary>
+
+**Input:**
+
+> Turn episode 1 into video; first give the character and scene generation prompts.
+
+**Output (excerpt):**
+
+```markdown
+### C01 — 秦烈·正面全身（角色一致性参考）
+Cinematic photorealistic style with dramatic lighting，
+32 岁亚洲男性，短寸黑发，剑眉星目，眉骨有一道浅疤；旧式军绿夹克、挺拔军姿；
+真实感：可见毛孔、皮肤纹理自然、轻微胡茬、自然油光，非塑料感；
+9:16 竖屏，影棚柔光，电影质感。
+
+### S01 — 苏家别墅·宴会厅·夜（场景参考）
+Cinematic photorealistic style，欧式豪华宴会厅，巨型水晶吊灯，大理石地面反光，
+香槟塔与宾客虚化背景，冷暖对比光；9:16 竖屏，电影级布光。
+
+### P01 — 旧军用手机（道具）
+写实风格，老旧三防军用手机，金属边框磨损，屏幕亮起"军部·特急"红色来电，微距特写。
+```
+
+</details>
+
+<details>
+<summary><b>④ Downstream · Seedance 2.0 timeline storyboard</b> (audio-visual integrated, feed to Xiaoyunque / Jimeng)</summary>
+
+**Input:**
+
+> Generate the Seedance 2.0 storyboard prompt for episode 1, scene 1.
+
+**Output:**
+
+```text
+画面无任何字幕。
+
+电影写实风格，15秒，9:16竖屏，豪门宴会厅冷暖对比、暗藏压迫的氛围
+
+0-3秒：场景建立 - 缓慢推镜头，水晶灯下宾客云集，秦烈一身旧军装立于门口格格不入，环境人声渐弱
+
+3-6秒：冲突引入 - 中景切近景，苏母嫌恶别过脸，苏母（冷笑）："五年不回，还以为死在外头了。"
+
+6-9秒：情绪反击 - 低角度特写，四岁念念攥拳挡在父亲身前，念念（倔强奶音）："不许凶我爸爸！我爸爸是大英雄！"
+
+9-12秒：人物定调 - 跟镜头下蹲，秦烈揉女儿的头，眼神冷冷扫过全场
+
+12-15秒：钩子落版 - 特写，秦烈口袋里旧手机骤然亮起"军部·特急"，红光映在他眼底
+
+【声音】低沉弦乐渐起暗藏压迫 + 宴会厅环境人声/高跟鞋声/手机震动 + 男声沉稳、童声清亮倔强、妇人声尖刻
+
+【参考】@图片1 秦烈面部与军装一致性，@图片2 宴会厅空间布局，@图片3 手机来电特写
+```
+
+> For episode 2+, use `将@视频1延长15s` and upload the previous episode as a video reference to keep character / scene continuity.
+
+</details>
+
+> Already have a novel / article / outline? **Skip the upstream** — just paste the text and say "convert to a Seedance storyboard", starting from the downstream flow in examples ③④.
 
 ## Workflow overview
 

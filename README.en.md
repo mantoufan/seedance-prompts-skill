@@ -117,15 +117,26 @@ The skill's body ([SKILL.md](skills/seedance-prompts-skill/SKILL.md) + [seedance
 - **Local rebuild**: `bash scripts/build-zip.sh`.
 - **Local auto-rebuild on commit** (optional): enable once with `git config core.hooksPath .githooks`; thereafter any commit touching `skills/` triggers [`.githooks/pre-commit`](.githooks/pre-commit) to repackage and `git add` the zip.
 
-## When it triggers
+## Usage & examples
 
-The skill is invoked automatically when you ask Claude to:
+After installing (see above), just describe what you want to Claude in natural language and the skill is invoked automatically. Two entry points:
 
-1. Write a complete 50-100 episode short-drama screenplay from a one-line idea or a novel (genre → episodes → per-episode → self-review → compliance → overseas);
-2. Convert an article / story into a video script;
-3. Generate Seedance 2.0 storyboard prompts;
-4. Plan a multi-episode AI video series;
-5. Create character / scene / prop generation prompts for image models.
+- **Write a short drama from scratch (upstream)**: say "write me an XX-genre short drama / start from genre selection" → enter the progressive command flow. You can also use the slash commands explicitly: `/start` genre → `/plan` story skeleton → `/characters` cast → `/outline` episode directory → `/episode N` per-episode script → `/review N` self-check → `/compliance` → `/export`; `/overseas` switches to the overseas mode at any stage.
+- **Turn existing material into video (downstream)**: paste a novel / article / outline and say "convert this into a Seedance video script / generate storyboard prompts" → get a standard screenplay + C/S/P asset prompts + timeline storyboards directly.
+
+### Examples
+
+**① Write a short drama from scratch (upstream)**
+
+> Write me a "returning war god + cute baby" short drama, female-audience, 60 episodes, starting from genre selection.
+
+Claude enters Stage 0: `/start` confirm genre/audience/tone/episode-count → `/plan` three-act structure + paywall cliffhangers + satisfaction matrix → `/characters` cast + 4-tier villains → `/outline` 60-episode directory (🔥 key / 💰 paywall) → `/episode 1` outputs the per-episode △ script → `/review`. Once the screenplay is done, hand it off to the downstream video stage in one step.
+
+**② Make video from an existing script/novel (downstream)**
+
+> Convert this novel into a Seedance 2.0 immersive short-film storyboard: {paste text}
+
+Claude outputs: a full screenplay (△ shots + dialogue + OS/VO) → C01–C99 / S01–S99 / P01–P99 asset-generation prompts (characters use the realism keywords) → 15s timeline storyboards (audio-visual integrated, dialogue-aligned, ending-frame continuation), ready to feed into Xiaoyunque / Jimeng.
 
 ## Workflow overview
 

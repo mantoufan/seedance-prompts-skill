@@ -13,6 +13,9 @@
 
 ## 能做什么
 
+覆盖「**创意 → 完整短剧剧本 → AI 视频提示词 → 成片**」全链路：
+
+- **（上游·可选）一句创意/小说 → 完整短剧剧本**：从选题立项到分集撰写、质量自检、合规审核、海外出海，写出 50-100 集完整文学剧本（渐进式命令流 `/start /plan /characters /outline /episode /review /compliance /export`）。
 - **文章/故事 → 视频脚本**：将完整文本或简短大纲改编为标准脚本格式（△镜头描述 + 对白 + OS/VO + 闪回 + 字幕）。
 - **生成 Seedance 2.0 分镜提示词**：时间轴格式、音画一体、可直接复制使用。
 - **多集系列规划**：短剧 5 集 ×15s、长剧 20 集 ×15s 的剧集分解与连续性管理。
@@ -26,6 +29,7 @@
 - **提示词工程底层机制与去 AI 感技巧库**（references/prompt-craft-and-realism.md，由抖音「刺猬星球superi」37 集创作者实操经验蒸馏，"邪修"篇）：误解机制 / 词序等级 / 扰动词 / 鲁棒性破坏 / 伪透视词 / 时间词 / 特征塌陷 / 反着写提示词等底层控制法，光线控制、JSON 结构化生图、反推与风格提取、去摆拍感 / 前景遮挡 / 减法审美 / 剪词、数据化调色、动作与人物 / 声音一致性、导演思维。
 - **Seedance 2.0 提示词配方手册**（references/seedance2-prompt-cookbook.md，由抖音「Seedance2 教学计划」14 集创作者实操经验蒸馏）：可照抄的「关键词触发」配方——运镜 / 速度感 / 快切 / 构图 / 光影 配方表，防崩万能公式（人物 / 场景 / 动漫二次元固定结构），以及短剧实战 8 大痛点避坑（音画同步、三层提示词结构、情绪递进、空间一致、多人分层、一素材一职责、爽点三段、动作戏省略暴力）。
 - **AI 人物真实感关键词库**（references/portrait-realism-details.md，由抖音「AI视觉真实感系列」等创作者蒸馏）：面部局部特写（眼睛 / 嘴唇 / 鼻颊 / 发丝）照抄词、皮肤去「塑料感」清单、微表情「写情绪变化过程」8 步框架，以及「别堆词→先搭结构 + 打光 + 多角度」让人物有活人感的工作流。
+- **短剧剧本创作模块（上游）**（references/short-drama-screenwriting.md + references/short-drama/，改编自 MIT 开源 [0xsline/short-drama](https://github.com/0xsline/short-drama)）：13 种题材 + 出海文化映射、开篇黄金法则、付费卡点 5 套路、节奏四阶段波形、5 大爽点矩阵、四层反派体系、5 种钩子、合规红线清单——把一句创意写成 50-100 集完整剧本，再无缝接入下游视频化（同用 △ + 景别格式）。
 - **官方指南同步**（2026.05.15 更新）：三类任务基础公式、进阶公式、主体定义（多主体/多素材）、分镜时序、动作描述、特殊字符规范、素材配置，以及 **10+ 条常见问题避坑**（ID 漂移 / 双胞胎 / 字幕 / 风格漂移 / 延长跳变 / 画质劣化 / 发音 / 音色等）。
 - **镜头语言、氛围关键词、多模态引用语法（@图片/@视频/@音频）速查表**。
 
@@ -49,7 +53,18 @@ seedance-prompts-skill/
             ├── cinematic-techniques.md      # 视听语言实战技巧库（运镜/光影/构图/节奏/蒙太奇/一致性/导演思维，创作者实操蒸馏）
             ├── prompt-craft-and-realism.md  # 提示词工程底层机制与去 AI 感技巧库（邪修篇：机制控制/真实感/调色/一致性/导演思维）
             ├── seedance2-prompt-cookbook.md # Seedance 2.0 提示词配方手册（运镜/光影/万能公式 + 短剧 8 大痛点避坑）
-            └── portrait-realism-details.md  # AI 人物真实感关键词库（眼/唇/鼻颊/发丝/皮肤/微表情 + 结构+打光+多角度工作流）
+            ├── portrait-realism-details.md  # AI 人物真实感关键词库（眼/唇/鼻颊/发丝/皮肤/微表情 + 结构+打光+多角度工作流）
+            ├── short-drama-screenwriting.md # 短剧剧本创作（上游）：命令流 + 八大方法论 + → 视频化交接
+            └── short-drama/                 # 短剧编剧方法论库（改编自 0xsline/short-drama, MIT）
+                ├── genre-guide.md           #   13 题材 + 出海映射
+                ├── opening-rules.md         #   开篇黄金法则 + 6 开场模板
+                ├── paywall-design.md        #   付费卡点 5 套路
+                ├── rhythm-curve.md          #   节奏曲线（单集微结构 + 全剧四阶段波形）
+                ├── satisfaction-matrix.md   #   5 大爽点矩阵
+                ├── villain-design.md        #   四层反派体系
+                ├── hook-design.md           #   5 种钩子类型
+                ├── compliance-checklist.md  #   合规红线/灰区清单
+                └── LICENSE                  #   上游 MIT 版权声明（© 2025 0xsline）
 ```
 
 ## 安装
@@ -134,8 +149,9 @@ cp -r /tmp/seedance/skills/seedance-prompts-skill .claude/skills/
 - 提示词工程去 AI 感技巧库蒸馏自抖音合集「刺猬星球superi · ai创作者的乌托邦」（37 集），见 [references/prompt-craft-and-realism.md](skills/seedance-prompts-skill/references/prompt-craft-and-realism.md)。
 - Seedance 2.0 提示词配方手册蒸馏自抖音合集「Seedance2 教学计划」（作者：张百川AI，14 集），见 [references/seedance2-prompt-cookbook.md](skills/seedance-prompts-skill/references/seedance2-prompt-cookbook.md)。
 - AI 人物真实感关键词库蒸馏自抖音合集「AI视觉真实感系列」（作者：啊布 / AI短剧实战派）及 Jac.key 等创作者，见 [references/portrait-realism-details.md](skills/seedance-prompts-skill/references/portrait-realism-details.md)。
+- 短剧剧本创作模块改编自开源 Claude Skill [0xsline/short-drama](https://github.com/0xsline/short-drama)（微短剧剧本创作技能包，MIT License，© 2025 0xsline），见 [references/short-drama-screenwriting.md](skills/seedance-prompts-skill/references/short-drama-screenwriting.md) 与 [references/short-drama/](skills/seedance-prompts-skill/references/short-drama/)（保留上游 LICENSE）。
 
-> 以上技巧库均由创作者公开视频/合集的文案、画面与图片信息蒸馏整理，内容版权归原作者所有，仅供学习研究。
+> 以上技巧库均由创作者公开视频/合集的文案、画面与图片信息蒸馏整理；短剧剧本创作模块改编自 0xsline/short-drama（MIT）。内容版权归各原作者所有，仅供学习研究。
 
 ## License
 

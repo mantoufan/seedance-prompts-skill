@@ -13,6 +13,9 @@ A professional **Seedance 2.0** AI video script & storyboard prompt generator Sk
 
 ## What it does
 
+Covers the full pipeline **idea → complete short-drama screenplay → AI video prompts → finished video**:
+
+- **(Upstream · optional) one-line idea / novel → full short-drama screenplay**: from genre selection to per-episode writing, self-review, compliance check and overseas adaptation — a complete 50-100 episode literary screenplay (progressive command flow `/start /plan /characters /outline /episode /review /compliance /export`).
 - **Article/story → video script**: adapt full text or a short outline into the standard screenplay format (△ shot descriptions + dialogue + OS/VO + flashbacks + subtitles).
 - **Generate Seedance 2.0 storyboard prompts**: timeline format, audio-visual integrated, copy-paste ready.
 - **Multi-episode series planning**: episode breakdown and continuity management for short series (5 × 15s) or long series (20 × 15s).
@@ -26,6 +29,7 @@ A professional **Seedance 2.0** AI video script & storyboard prompt generator Sk
 - **Prompt-craft & realism playbook** (references/prompt-craft-and-realism.md, distilled from a 37-episode Douyin series by a practitioner): model-mechanism hacks (misinterpretation / word-order priority / perturbation words / robustness break / pseudo-perspective / time words / feature collapse / reverse prompting), lighting control, JSON-structured generation, prompt/style reverse-engineering, de-AI-look (anti-staged feel / foreground occlusion / subtractive aesthetics / word-trimming), data-driven color grading, action & character/voice consistency, and director's mindset.
 - **Seedance 2.0 prompt cookbook** (references/seedance2-prompt-cookbook.md, distilled from a 14-episode Douyin "Seedance2 lessons" series): copy-ready "keyword-trigger" recipes — camera-move / speed / fast-cut / composition / lighting recipe tables, anti-collapse universal formulas (character / scene / anime structures), plus 8 short-drama troubleshooting fixes (audio-first sync, 3-layer prompt structure, emotion progression, spatial consistency, multi-person layering, one-asset-one-job, the 3-beat payoff, off-screen action).
 - **AI portrait-realism keyword library** (references/portrait-realism-details.md, distilled from the Douyin "AI visual realism" series and others): copy-ready facial close-up keywords (eyes / lips / nose-cheek / hair), an anti-"plastic-skin" checklist, the 8-step micro-expression "write the emotion-change process" framework, and a "don't keyword-stuff → structure + relighting + multi-angle" workflow for lifelike characters.
+- **Short-drama screenwriting module (upstream)** (references/short-drama-screenwriting.md + references/short-drama/, adapted from the MIT open-source [0xsline/short-drama](https://github.com/0xsline/short-drama)): 13 genres + overseas cultural mapping, golden opening rules, 5 paywall patterns, the 4-stage rhythm wave, the 5-type satisfaction matrix, the 4-tier villain system, 5 hook types, and a compliance red-line checklist — turn a one-line idea into a full 50-100 episode screenplay, then hand off seamlessly to the downstream video stage (same △ + shot-size format).
 - **Official guide sync** (updated 2026.05.15): three task-type base formulas, the advanced formula, subject definition (multi-subject / multi-asset), shot sequencing, action description, special-character syntax, asset configuration, and **10+ common-issue fixes** (ID drift / twins / subtitles / style drift / extension jumps / quality decay / pronunciation / voice timbre, etc.).
 - **Quick-reference tables** for camera language, atmosphere keywords, and multimodal reference syntax (@image / @video / @audio).
 
@@ -49,7 +53,12 @@ seedance-prompts-skill/
             ├── cinematic-techniques.md      # cinematic-language playbook (camera/lighting/composition/rhythm/montage/consistency/director thinking)
             ├── prompt-craft-and-realism.md  # prompt-craft & realism playbook (model-mechanism hacks / de-AI-look / grading / consistency / director mindset)
             ├── seedance2-prompt-cookbook.md # Seedance 2.0 prompt cookbook (camera/lighting/universal formulas + 8 short-drama troubleshooting fixes)
-            └── portrait-realism-details.md  # AI portrait-realism keyword library (eyes/lips/nose-cheek/hair/skin/micro-expression + structure+relight+multi-angle workflow)
+            ├── portrait-realism-details.md  # AI portrait-realism keyword library (eyes/lips/nose-cheek/hair/skin/micro-expression + structure+relight+multi-angle workflow)
+            ├── short-drama-screenwriting.md # Short-drama screenwriting (upstream): command flow + 8 methodology docs + → video handoff
+            └── short-drama/                 # short-drama screenwriting methodology (adapted from 0xsline/short-drama, MIT)
+                ├── genre-guide.md / opening-rules.md / paywall-design.md / rhythm-curve.md
+                ├── satisfaction-matrix.md / villain-design.md / hook-design.md / compliance-checklist.md
+                └── LICENSE                  #   upstream MIT copyright (© 2025 0xsline)
 ```
 
 ## Installation
@@ -134,8 +143,9 @@ See [SKILL.md](skills/seedance-prompts-skill/SKILL.md) and [references/seedance-
 - The prompt-craft & realism playbook is distilled from the Douyin series "刺猬星球superi · ai创作者的乌托邦" (37 episodes); see [references/prompt-craft-and-realism.md](skills/seedance-prompts-skill/references/prompt-craft-and-realism.md).
 - The Seedance 2.0 prompt cookbook is distilled from the Douyin series "Seedance2 教学计划" (by 张百川AI, 14 episodes); see [references/seedance2-prompt-cookbook.md](skills/seedance-prompts-skill/references/seedance2-prompt-cookbook.md).
 - The AI portrait-realism keyword library is distilled from the Douyin series "AI视觉真实感系列" (by 啊布 / AI短剧实战派) and creators such as Jac.key; see [references/portrait-realism-details.md](skills/seedance-prompts-skill/references/portrait-realism-details.md).
+- The short-drama screenwriting module is adapted from the open-source Claude Skill [0xsline/short-drama](https://github.com/0xsline/short-drama) (micro-drama screenwriting skill, MIT License, © 2025 0xsline); see [references/short-drama-screenwriting.md](skills/seedance-prompts-skill/references/short-drama-screenwriting.md) and [references/short-drama/](skills/seedance-prompts-skill/references/short-drama/) (upstream LICENSE preserved).
 
-> All playbooks above are distilled from creators' public videos/collections (captions, on-screen text and images). Copyright belongs to the original authors; for study and research only.
+> The playbooks above are distilled from creators' public videos/collections (captions, on-screen text and images); the short-drama screenwriting module is adapted from 0xsline/short-drama (MIT). Copyright belongs to the original authors; for study and research only.
 
 ## License
 

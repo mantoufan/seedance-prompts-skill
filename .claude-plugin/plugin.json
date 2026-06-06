@@ -2,7 +2,7 @@
   "name": "seedance-prompts-skill",
   "displayName": "Seedance 提示词生成器",
   "description": "覆盖「创意→完整短剧剧本→AI 视频提示词」全链路的 Skill：上游可从一句创意/小说创作 50-100 集完整短剧剧本（选题/付费卡点/爽点矩阵/反派体系/合规/出海），下游把剧本转为 Seedance 2.0 标准剧本、资产生成提示词与分镜脚本。含 12 条生产铁律 + 17 个模板 + 视听语言实战技巧库 + 提示词工程去 AI 感技巧库 + Seedance 2.0 提示词配方手册 + AI 人物真实感关键词库 + 短剧剧本创作模块，并同步火山引擎官方指南。",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "author": {
     "name": "mantoufan"
   },

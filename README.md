@@ -1,12 +1,12 @@
 # Seedance 提示词生成器
 
-> AI 视频脚本与分镜提示词生成器 · Claude Skill，同样适用于 ChatGPT / 其它 LLM
+> 创意 → 完整短剧剧本 → AI 视频提示词 全链路生成器 · Claude Skill，同样适用于 ChatGPT / 其它 LLM
 
 **简体中文** | [English](README.en.md)
 
 > 本项目以 [liangdabiao/Seedance2-Storyboard-Generator](https://github.com/liangdabiao/Seedance2-Storyboard-Generator) 为基础，在 60 天内制作 60 个短视频、抖音涨粉 6000 的实战过程中，一点点更新、修改、完善而成。
 
-专业的 **Seedance 2.0** AI 视频脚本与分镜提示词生成 Skill。把一篇小说、文章或一句故事大纲，转换成可直接投喂给字节「小云雀」/ 即梦平台的标准剧本、资产生成提示词和时间轴分镜脚本。
+专业的 **Seedance 2.0** AI 视频脚本与分镜提示词生成 Skill，覆盖「**创意 → 完整短剧剧本 → AI 视频提示词 → 成片**」全链路。上游可从一句创意/一篇小说写出 50-100 集完整短剧剧本（选题 / 付费卡点 / 爽点矩阵 / 反派体系 / 合规 / 出海）；下游把剧本、文章或故事大纲转换成可直接投喂给字节「小云雀」/ 即梦平台的标准剧本、资产生成提示词和时间轴分镜脚本。
 
 > **可用平台**　国内：即梦、小云雀、LibTV；境外：Dreamina（即梦国际版）、CapCut、Higgsfield。
 > 入口示例（小云雀）：App / 网页版 → 创作 → 模式 → **沉浸式短片（Seedance 2.0）**。

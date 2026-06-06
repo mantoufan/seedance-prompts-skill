@@ -1,12 +1,12 @@
 # Seedance Prompts Generator
 
-> An AI video script & storyboard prompt generator · a Claude Skill that works with ChatGPT / other LLMs too
+> A full idea → complete short-drama screenplay → AI video-prompt pipeline generator · a Claude Skill that works with ChatGPT / other LLMs too
 
 [简体中文](README.md) | **English**
 
 > Built on top of [liangdabiao/Seedance2-Storyboard-Generator](https://github.com/liangdabiao/Seedance2-Storyboard-Generator), then iteratively updated, revised and refined through a hands-on run of producing 60 short videos in 60 days and gaining 6,000 Douyin followers.
 
-A professional **Seedance 2.0** AI video script & storyboard prompt generator Skill. It turns a novel, an article, or a one-line story outline into a standard screenplay, asset-generation prompts, and timeline storyboards — ready to feed straight into ByteDance's "Xiaoyunque" (小云雀) / Jimeng platform.
+A professional **Seedance 2.0** AI video script & storyboard prompt generator Skill, covering the full pipeline **idea → complete short-drama screenplay → AI video prompts → finished video**. Upstream, it can write a complete 50-100 episode short drama from a one-line idea or a novel (genre / paywall cliffhangers / satisfaction matrix / villain system / compliance / overseas); downstream, it turns the screenplay, an article, or a story outline into a standard screenplay, asset-generation prompts, and timeline storyboards — ready to feed straight into ByteDance's "Xiaoyunque" (小云雀) / Jimeng platform.
 
 > **Where it's available**　In China: Jimeng (即梦), Xiaoyunque (小云雀), LibTV; Overseas: Dreamina (Jimeng's global edition), CapCut, Higgsfield.
 > Entry example (Xiaoyunque): App / Web → Create → Mode → **Immersive Short Film (Seedance 2.0)**.

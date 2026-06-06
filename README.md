@@ -4,7 +4,7 @@
 
 **简体中文** | [English](README.en.md)
 
-> 本项目以 [liangdabiao/Seedance2-Storyboard-Generator](https://github.com/liangdabiao/Seedance2-Storyboard-Generator) 为基础，在 60 天内制作 60 个短视频、抖音涨粉 6000 的实战过程中，一点点更新、修改、完善而成。
+> 本项目以 [liangdabiao/Seedance2-Storyboard-Generator](https://github.com/liangdabiao/Seedance2-Storyboard-Generator) 为基础，在 60 天内制作 60 个短视频、抖音涨粉 6000 的实战过程中，一点点学习、尝试、迭代完成。
 
 专业的 **Seedance 2.0** AI 视频脚本与分镜提示词生成 Skill，覆盖「**创意 → 完整短剧剧本 → AI 视频提示词 → 成片**」全链路。上游可从一句创意/一篇小说写出 50-100 集完整短剧剧本（选题 / 付费卡点 / 爽点矩阵 / 反派体系 / 合规 / 出海）；下游把剧本、文章或故事大纲转换成可直接投喂给字节「小云雀」/ 即梦平台的标准剧本、资产生成提示词和时间轴分镜脚本。
 
@@ -127,10 +127,11 @@ cp -r /tmp/seedance/skills/seedance-prompts-skill .claude/skills/
 
 向 Claude 提出以下任意需求时会自动调用本技能：
 
-1. 把文章 / 故事转换为视频脚本；
-2. 生成 Seedance 2.0 分镜提示词；
-3. 规划多集 AI 视频系列；
-4. 为图像模型创建角色 / 场景 / 道具生成提示词。
+1. 从一句创意 / 一篇小说创作 50-100 集完整短剧剧本（选题 → 分集 → 单集 → 自检 → 合规 → 出海）；
+2. 把文章 / 故事转换为视频脚本；
+3. 生成 Seedance 2.0 分镜提示词；
+4. 规划多集 AI 视频系列；
+5. 为图像模型创建角色 / 场景 / 道具生成提示词。
 
 ## 工作流概览
 

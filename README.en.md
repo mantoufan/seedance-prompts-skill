@@ -4,7 +4,7 @@
 
 [简体中文](README.md) | **English**
 
-> Built on top of [liangdabiao/Seedance2-Storyboard-Generator](https://github.com/liangdabiao/Seedance2-Storyboard-Generator), then iteratively updated, revised and refined through a hands-on run of producing 60 short videos in 60 days and gaining 6,000 Douyin followers.
+> Built on top of [liangdabiao/Seedance2-Storyboard-Generator](https://github.com/liangdabiao/Seedance2-Storyboard-Generator), then gradually learned, experimented and iterated into shape through a hands-on run of producing 60 short videos in 60 days and gaining 6,000 Douyin followers.
 
 A professional **Seedance 2.0** AI video script & storyboard prompt generator Skill, covering the full pipeline **idea → complete short-drama screenplay → AI video prompts → finished video**. Upstream, it can write a complete 50-100 episode short drama from a one-line idea or a novel (genre / paywall cliffhangers / satisfaction matrix / villain system / compliance / overseas); downstream, it turns the screenplay, an article, or a story outline into a standard screenplay, asset-generation prompts, and timeline storyboards — ready to feed straight into ByteDance's "Xiaoyunque" (小云雀) / Jimeng platform.
 
@@ -121,10 +121,11 @@ The skill's body ([SKILL.md](skills/seedance-prompts-skill/SKILL.md) + [seedance
 
 The skill is invoked automatically when you ask Claude to:
 
-1. Convert an article / story into a video script;
-2. Generate Seedance 2.0 storyboard prompts;
-3. Plan a multi-episode AI video series;
-4. Create character / scene / prop generation prompts for image models.
+1. Write a complete 50-100 episode short-drama screenplay from a one-line idea or a novel (genre → episodes → per-episode → self-review → compliance → overseas);
+2. Convert an article / story into a video script;
+3. Generate Seedance 2.0 storyboard prompts;
+4. Plan a multi-episode AI video series;
+5. Create character / scene / prop generation prompts for image models.
 
 ## Workflow overview
 

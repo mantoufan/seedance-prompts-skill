@@ -291,4 +291,6 @@ Cinematic photorealistic style，欧式豪华宴会厅，巨型水晶吊灯，
 
 ## License
 
-MIT
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)（署名-非商业性使用 4.0 国际）。可自由使用、分享、改编，需署名，**仅限非商业用途，禁止商业性使用**。详见 [LICENSE](LICENSE)。
+
+> 例外：短剧剧本创作模块（`skills/seedance-prompts-skill/references/short-drama/`）改编自 [0xsline/short-drama](https://github.com/0xsline/short-drama)，该上游部分仍沿用其原始 MIT 许可（© 2025 0xsline），并保留其 LICENSE 文件。

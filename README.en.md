@@ -264,6 +264,14 @@ See [SKILL.md](skills/seedance-prompts-skill/SKILL.md) and [references/seedance-
 
 ## License
 
-[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) (Attribution-NonCommercial 4.0 International). You may use, share, and adapt this material with attribution, **for non-commercial purposes only — commercial use is NOT permitted**. See [LICENSE](LICENSE).
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) (Attribution-NonCommercial 4.0 International). You may use, share, and adapt this material **with attribution and source credit**, **for non-commercial purposes only — commercial use is NOT permitted**. See [LICENSE](LICENSE).
+
+**Attribution requirement**: when using, sharing, or adapting this project (including its prompts, templates, and methodology), keep the following source credit (copy-paste):
+
+```
+Adapted from / partially uses mantoufan's seedance-prompts-skill
+Source: https://github.com/mantoufan/seedance-prompts-skill
+License: CC BY-NC 4.0 (Attribution-NonCommercial)
+```
 
 > Exception: the short-drama screenwriting module (`skills/seedance-prompts-skill/references/short-drama/`) is adapted from [0xsline/short-drama](https://github.com/0xsline/short-drama); that upstream portion remains under its original MIT License (© 2025 0xsline), with its LICENSE file preserved.

@@ -254,9 +254,9 @@ See [SKILL.md](skills/seedance-prompts-skill/SKILL.md) and [references/seedance-
 ## References
 
 - Volcengine official prompt guide: https://www.volcengine.com/docs/82379/2222480?lang=zh
-- The cinematic-technique playbook is distilled from the Douyin series "AI 视频教程" (by 李一帆, 17 episodes); see [references/cinematic-techniques.md](skills/seedance-prompts-skill/references/cinematic-techniques.md).
+- The cinematic-technique playbook is distilled from the Douyin series "AI 视频教程" (by 李一帆, 18 episodes); see [references/cinematic-techniques.md](skills/seedance-prompts-skill/references/cinematic-techniques.md).
 - The prompt-craft & realism playbook is distilled from the Douyin series "刺猬星球superi · ai创作者的乌托邦" (37 episodes); see [references/prompt-craft-and-realism.md](skills/seedance-prompts-skill/references/prompt-craft-and-realism.md).
-- The Seedance 2.0 prompt cookbook is distilled from the Douyin series "Seedance2 教学计划" (by 张百川AI, 14 episodes); see [references/seedance2-prompt-cookbook.md](skills/seedance-prompts-skill/references/seedance2-prompt-cookbook.md).
+- The Seedance 2.0 prompt cookbook is distilled from the Douyin series "Seedance2 教学计划" (by 张百川AI, 16 episodes); see [references/seedance2-prompt-cookbook.md](skills/seedance-prompts-skill/references/seedance2-prompt-cookbook.md).
 - The AI portrait-realism keyword library is distilled from the Douyin series "AI视觉真实感系列" (by 啊布 / AI短剧实战派) and creators such as Jac.key; see [references/portrait-realism-details.md](skills/seedance-prompts-skill/references/portrait-realism-details.md).
 - The short-drama screenwriting module is adapted from the open-source Claude Skill [0xsline/short-drama](https://github.com/0xsline/short-drama) (micro-drama screenwriting skill, MIT License, © 2025 0xsline); see [references/short-drama-screenwriting.md](skills/seedance-prompts-skill/references/short-drama-screenwriting.md) and [references/short-drama/](skills/seedance-prompts-skill/references/short-drama/) (upstream LICENSE preserved).
 

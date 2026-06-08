@@ -25,9 +25,9 @@
 
 - **12 条生产铁律**（SKILL.md 顶部，最高优先级）：时长分段计算、续接残影加固、无字幕规则、对白时间轴对齐、审核规避、TTS 配音避坑、动作可分性、双人手部锁定、输出排版、声线锁定、**视听语言优先**、**提示词即视觉语言 · 去 AI 感**。
 - **17 个提示词模板**（references/seedance-prompt-guide.md）：叙事 / 产品 / 角色 / 风景 / 战争 / 长镜头 / 伪纪录片 / **沉浸式短片（视听一体·八维黄金公式）** 等。
-- **视听语言实战技巧库**（references/cinematic-techniques.md，由抖音「AI 视频教程」17 集创作者实操经验蒸馏）：景别分层、16 种运镜→情绪、8 种打光→情绪、7 种构图→作用 映射表，节奏与蒙太奇，活人感 / 情绪表情 / AI 配音公式，一致性硬控四步法，漫剧短剧工业化 SOP，**AI 短剧导演思维**（五大注意力钩子 + 短剧 Agent / 角色资产库 / 分镜节点工作流）。
+- **视听语言实战技巧库**（references/cinematic-techniques.md，由抖音「AI 视频教程」18 集创作者实操经验蒸馏）：景别分层、16 种运镜→情绪、8 种打光→情绪、7 种构图→作用 映射表，节奏与蒙太奇，活人感 / 情绪表情 / AI 配音公式，一致性硬控四步法，漫剧短剧工业化 SOP，**AI 短剧导演思维**（五大注意力钩子 + 短剧 Agent / 角色资产库 / 分镜节点工作流）。
 - **提示词工程底层机制与去 AI 感技巧库**（references/prompt-craft-and-realism.md，由抖音「刺猬星球superi」37 集创作者实操经验蒸馏，"邪修"篇）：误解机制 / 词序等级 / 扰动词 / 鲁棒性破坏 / 伪透视词 / 时间词 / 特征塌陷 / 反着写提示词等底层控制法，光线控制、JSON 结构化生图、反推与风格提取、去摆拍感 / 前景遮挡 / 减法审美 / 剪词、数据化调色、动作与人物 / 声音一致性、导演思维。
-- **Seedance 2.0 提示词配方手册**（references/seedance2-prompt-cookbook.md，由抖音「Seedance2 教学计划」14 集创作者实操经验蒸馏）：可照抄的「关键词触发」配方——运镜 / 速度感 / 快切 / 构图 / 光影 配方表，防崩万能公式（人物 / 场景 / 动漫二次元固定结构），以及短剧实战 8 大痛点避坑（音画同步、三层提示词结构、情绪递进、空间一致、多人分层、一素材一职责、爽点三段、动作戏省略暴力）。
+- **Seedance 2.0 提示词配方手册**（references/seedance2-prompt-cookbook.md，由抖音「Seedance2 教学计划」16 集创作者实操经验蒸馏）：可照抄的「关键词触发」配方——运镜 / 速度感 / 快切 / 构图 / 光影 配方表，防崩万能公式（人物 / 场景 / 动漫二次元固定结构），以及短剧实战 8 大痛点避坑（音画同步、三层提示词结构、情绪递进、空间一致、多人分层、一素材一职责、爽点三段、动作戏省略暴力）。
 - **AI 人物真实感关键词库**（references/portrait-realism-details.md，由抖音「AI视觉真实感系列」等创作者蒸馏）：面部局部特写（眼睛 / 嘴唇 / 鼻颊 / 发丝）照抄词、皮肤去「塑料感」清单、微表情「写情绪变化过程」8 步框架，以及「别堆词→先搭结构 + 打光 + 多角度」让人物有活人感的工作流。
 - **短剧剧本创作模块（上游）**（references/short-drama-screenwriting.md + references/short-drama/，改编自 MIT 开源 [0xsline/short-drama](https://github.com/0xsline/short-drama)）：13 种题材 + 出海文化映射、开篇黄金法则、付费卡点 5 套路、节奏四阶段波形、5 大爽点矩阵、四层反派体系、5 种钩子、合规红线清单（对标《网络短视频内容审核标准细则 2021》，含**一次性合规风险预警 · 不限制创作**）——把一句创意写成完整剧本（集数可自定义，常见 50-100 集），再无缝接入下游视频化（同用 △ + 景别格式）。
 - **官方指南同步**（2026.05.15 更新）：三类任务基础公式、进阶公式、主体定义（多主体/多素材）、分镜时序、动作描述、特殊字符规范、素材配置，以及 **10+ 条常见问题避坑**（ID 漂移 / 双胞胎 / 字幕 / 风格漂移 / 延长跳变 / 画质劣化 / 发音 / 音色等）。
@@ -281,9 +281,9 @@ Cinematic photorealistic style，欧式豪华宴会厅，巨型水晶吊灯，
 ## 参考
 
 - 火山引擎官方提示词指南：https://www.volcengine.com/docs/82379/2222480?lang=zh
-- 视听语言实战技巧库蒸馏自抖音合集「AI 视频教程」（作者：李一帆 /「AI 界人民教师一帆」，17 集），见 [references/cinematic-techniques.md](skills/seedance-prompts-skill/references/cinematic-techniques.md)。
+- 视听语言实战技巧库蒸馏自抖音合集「AI 视频教程」（作者：李一帆 /「AI 界人民教师一帆」，18 集），见 [references/cinematic-techniques.md](skills/seedance-prompts-skill/references/cinematic-techniques.md)。
 - 提示词工程去 AI 感技巧库蒸馏自抖音合集「刺猬星球superi · ai创作者的乌托邦」（37 集），见 [references/prompt-craft-and-realism.md](skills/seedance-prompts-skill/references/prompt-craft-and-realism.md)。
-- Seedance 2.0 提示词配方手册蒸馏自抖音合集「Seedance2 教学计划」（作者：张百川AI，14 集），见 [references/seedance2-prompt-cookbook.md](skills/seedance-prompts-skill/references/seedance2-prompt-cookbook.md)。
+- Seedance 2.0 提示词配方手册蒸馏自抖音合集「Seedance2 教学计划」（作者：张百川AI，16 集），见 [references/seedance2-prompt-cookbook.md](skills/seedance-prompts-skill/references/seedance2-prompt-cookbook.md)。
 - AI 人物真实感关键词库蒸馏自抖音合集「AI视觉真实感系列」（作者：啊布 / AI短剧实战派）及 Jac.key 等创作者，见 [references/portrait-realism-details.md](skills/seedance-prompts-skill/references/portrait-realism-details.md)。
 - 短剧剧本创作模块改编自开源 Claude Skill [0xsline/short-drama](https://github.com/0xsline/short-drama)（微短剧剧本创作技能包，MIT License，© 2025 0xsline），见 [references/short-drama-screenwriting.md](skills/seedance-prompts-skill/references/short-drama-screenwriting.md) 与 [references/short-drama/](skills/seedance-prompts-skill/references/short-drama/)（保留上游 LICENSE）。
 
@@ -293,7 +293,7 @@ Cinematic photorealistic style，欧式豪华宴会厅，巨型水晶吊灯，
 
 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)（署名-非商业性使用 4.0 国际）。可自由使用、分享、改编，**需署名、标注来源**，且**仅限非商业用途，禁止商业性使用**。详见 [LICENSE](LICENSE)。
 
-[![商务合作请联系 m@cv.cm](assets/cooperation-zh.svg)](mailto:m@cv.cm)
+[![合作请联系 m@cv.cm](assets/cooperation-zh.svg)](mailto:m@cv.cm)
 
 **署名要求**：使用、分享或改编本项目（含其提示词、模板、方法论）时，须保留下述来源标注（可复制）：
 

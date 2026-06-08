@@ -266,8 +266,6 @@ See [SKILL.md](skills/seedance-prompts-skill/SKILL.md) and [references/seedance-
 
 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) (Attribution-NonCommercial 4.0 International). You may use, share, and adapt this material **with attribution and source credit**, **for non-commercial purposes only — commercial use is NOT permitted**. See [LICENSE](LICENSE).
 
-**Commercial use is NOT permitted; for a commercial license or partnership, contact us:**
-
 [![Business & licensing: m@cv.cm](assets/cooperation-en.svg)](mailto:m@cv.cm)
 
 **Attribution requirement**: when using, sharing, or adapting this project (including its prompts, templates, and methodology), keep the following source credit (copy-paste):

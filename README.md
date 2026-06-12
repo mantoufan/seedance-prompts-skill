@@ -8,7 +8,7 @@
 
 专业的 **Seedance 2.0** AI 视频脚本与分镜提示词生成 Skill，覆盖「**创意 → 完整短剧剧本 → AI 视频提示词 → 成片**」全链路。上游可从一句创意/一篇小说写出完整短剧剧本（集数可自定义，常见 50-100 集、单集 1-3 分钟，符合广电总局微短剧规范；选题 / 付费卡点 / 爽点矩阵 / 反派体系 / 合规 / 出海）；下游把剧本、文章或故事大纲转换成可直接投喂给字节「小云雀」/ 即梦平台的标准剧本、资产生成提示词和时间轴分镜脚本。
 
-> **可用平台**　国内：<a href="https://jimeng.jianying.com" target="_blank">即梦</a>、<a href="https://xyq.jianying.com" target="_blank">小云雀</a>、<a href="https://www.liblib.tv/" target="_blank">LibTV</a>；境外：<a href="https://dreamina.capcut.com" target="_blank">Dreamina（即梦国际版）</a>、<a href="https://www.capcut.com" target="_blank">CapCut</a>、<a href="https://higgsfield.ai/" target="_blank">Higgsfield</a>、<a href="https://cv.cm/v" target="_blank">CV.CM（免排队）</a>。
+> **可用平台**　国内：<a href="https://jimeng.jianying.com" target="_blank">即梦</a>、<a href="https://xyq.jianying.com" target="_blank">小云雀</a>、<a href="https://www.liblib.tv/" target="_blank">LibTV</a>；境外：<a href="https://dreamina.capcut.com" target="_blank">Dreamina</a>、<a href="https://www.capcut.com" target="_blank">CapCut</a>、<a href="https://higgsfield.ai/" target="_blank">Higgsfield</a>、<a href="https://cv.cm/v" target="_blank">CV.CM（免排队）</a>。
 > 入口示例（小云雀）：App / 网页版 → 创作 → 模式 → **沉浸式短片（Seedance 2.0）**。
 
 ## 能做什么

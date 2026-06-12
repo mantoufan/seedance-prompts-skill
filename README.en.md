@@ -8,7 +8,7 @@
 
 A professional **Seedance 2.0** AI video script & storyboard prompt generator Skill, covering the full pipeline **idea → complete short-drama screenplay → AI video prompts → finished video**. Upstream, it can write a complete short drama from a one-line idea or a novel (episode count is configurable — typically 50-100 episodes, 1-3 min each, conforming to China's NRTA micro-drama standards; genre / paywall cliffhangers / satisfaction matrix / villain system / compliance / overseas); downstream, it turns the screenplay, an article, or a story outline into a standard screenplay, asset-generation prompts, and timeline storyboards — ready to feed straight into ByteDance's "Xiaoyunque" (小云雀) / Jimeng platform.
 
-> **Where it's available**　In China: Jimeng (即梦), Xiaoyunque (小云雀), LibTV; Overseas: Dreamina (Jimeng's global edition), CapCut, Higgsfield.
+> **Where it's available**　In China: <a href="https://jimeng.jianying.com" target="_blank">Jimeng (即梦)</a>, <a href="https://xyq.jianying.com" target="_blank">Xiaoyunque (小云雀)</a>, <a href="https://www.liblib.tv/" target="_blank">LibTV</a>; Overseas: <a href="https://dreamina.capcut.com" target="_blank">Dreamina</a>, <a href="https://www.capcut.com" target="_blank">CapCut</a>, <a href="https://higgsfield.ai/" target="_blank">Higgsfield</a>, <a href="https://cv.cm/v" target="_blank">CV.CM (no queue)</a>.
 > Entry example (Xiaoyunque): App / Web → Create → Mode → **Immersive Short Film (Seedance 2.0)**.
 
 ## What it does
